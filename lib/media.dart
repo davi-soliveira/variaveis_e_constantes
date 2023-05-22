@@ -1,9 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/cupertino.dart';
+import 'package:flutter/src/foundation/key.dart';
+import 'package:flutter/src/widgets/framework.dart';
+import 'package:prompt_dialog/prompt_dialog.dart';
 
 class NotaMedia extends StatefulWidget{
   const NotaMedia ({Key? key}) : super(key: key);
   @override
-  State<N>
+  State<NotaMedia> createState() => _NotaMediaState()
 }
 
 class _NotaMediaState extends State<NotaMedia>{
@@ -24,16 +28,17 @@ class _NotaMediaState extends State<NotaMedia>{
       children: [
         ElevatedButton(
           onPressed: () async{
-            nome = await prompt(context, title(const))
-              'Não identificado!';
+            nome = 
+              await prompt(context, title:const Text("Digite o nome"))??
+                  'Não identificado!';
             nota1Texto = 
-              await prompt(context, title(const))
+              await prompt(context, title:const Text("Digite nota 1"))??
                   '0.00';
             nota2Texto = 
-              await prompt(context, title(const))
+              await prompt(context, title:const Text("Digite nota 2"))??
                   '0.00';
             nota3Texto = 
-              await prompt(context, title(const))
+              await prompt(context, title: const Text("Digite nota 3"))??
                   '0.00';
             nota1 = double.parse(nota1Texto);
             nota2 = double.parse(nota2Texto);
