@@ -1,10 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:variaveis_e_constantes/elevated_button.dart';
-import 'package:variaveis_e_constantes/scaffold.dart';
-import 'package:variaveis_e_constantes/text.dart';
+import 'package:variaveis_e_constantes/Widget_row.dart';
 
 
 void main() {
-  runApp(const MaterialApp(home:MyButton()));
+  runApp(const MaterialApp(home:ColunasLinhas()));
   
 }
